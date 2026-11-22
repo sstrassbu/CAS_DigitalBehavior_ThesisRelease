@@ -130,7 +130,7 @@ Verified for this release: the integrity tests pass, all modules import, and all
 
 ## 9. Use of AI assistance
 
-In line with the statement in the thesis (Methodology, *Use of artificial intelligence*): ChatGPT and Claude (including the Claude Code coding assistant) were used as supporting aids for planning analyses, code development and debugging, drafting documentation, and revising wording; NotebookLM was used to organise source material. The tools were not treated as sources and did not independently determine the study design, operationalisations, statistical interpretations or conclusions. Suggested code and claims were reviewed against the data, executed outputs and original sources. A large part of the working reports and companion documentation in this repository was drafted with Claude Code under the author's direction and review. The author is responsible for the accuracy and integrity of all content.
+In line with the statement in the thesis (Methodology, *Use of artificial intelligence*): ChatGPT and Claude (including the Claude Code coding assistant) were used as supporting aids for planning analyses, code development and debugging, drafting documentation, and revising wording; NotebookLM was used to organise source material. The tools were not treated as sources and did not independently determine the study design, operationalisations, statistical interpretations or conclusions. Suggested code and claims were reviewed against the data, executed outputs and original sources. Parts of the working reports and companion documentation in this repository were drafted with Claude Code under the author's direction and review. The author is responsible for the accuracy and integrity of all content.
 
 ## 10. License and citation
 
