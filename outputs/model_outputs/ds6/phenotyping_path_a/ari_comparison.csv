@@ -1,0 +1,2 @@
+n_overlap,k_main,k_path_a,ARI,verdict
+227,2,2,0.0235,LOW/ORTHOGONAL -- removing DyS changes the split substantially; the main pass's k=2 solution was substantially DyS's own signal

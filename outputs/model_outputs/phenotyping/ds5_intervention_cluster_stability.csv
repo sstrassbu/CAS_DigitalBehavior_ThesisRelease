@@ -1,0 +1,13 @@
+analysis,N,k_tested,sil,min_cell,jaccard,flag,selected
+full_sample,414,2.0,0.33,187.0,0.935,STABLE,False
+full_sample,414,3.0,0.387,68.0,0.94,STABLE,True
+full_sample,414,4.0,0.367,64.0,0.915,STABLE,False
+reintervention,135,2.0,0.325,67.0,0.912,STABLE,True
+reintervention,135,3.0,,19.0,,REJECTED_MINCELL,False
+reintervention,135,4.0,,18.0,,REJECTED_MINCELL,False
+profile_B_reintervention,99,2.0,0.328,42.0,0.837,STABLE,True
+profile_B_reintervention,99,3.0,,15.0,,REJECTED_MINCELL,False
+control,137,2.0,0.379,68.0,0.937,STABLE,False
+control,137,3.0,0.414,30.0,0.808,STABLE,True
+control,137,4.0,,21.0,,REJECTED_MINCELL,False
+default,142,,,,,DESCRIPTIVE_ONLY,False

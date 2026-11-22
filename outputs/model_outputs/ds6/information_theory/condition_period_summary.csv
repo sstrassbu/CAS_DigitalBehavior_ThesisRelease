@@ -1,0 +1,7 @@
+study_condition,study_period,n,H_app_mean,H_app_median,H_hour_mean,H_hour_median,H_emp_mean,H_emp_median,H_SDE_mean,H_SDE_median,I_consec_mean,I_consec_median
+control,baseline,76,1.3252,1.3542,4.0243,4.0413,3.0792,3.1069,6.418,6.3966,0.0753,0.059
+control,intervention,76,1.2873,1.3447,4.0357,4.0797,3.1725,3.2535,6.1233,6.1594,0.0619,0.0405
+default,baseline,88,1.2623,1.3922,3.9732,4.0323,3.0423,3.0566,6.1596,6.2992,0.0733,0.0493
+default,intervention,88,1.2101,1.3717,3.9807,4.004,2.9456,3.1121,4.9406,5.1179,0.0494,0.0426
+intervention,baseline,79,1.2169,1.3581,3.9587,4.0329,3.0012,3.0566,6.1166,6.1344,0.0583,0.0497
+intervention,intervention,79,1.2209,1.3259,3.9531,4.0183,3.0265,3.224,5.2198,5.4272,0.0482,0.0348

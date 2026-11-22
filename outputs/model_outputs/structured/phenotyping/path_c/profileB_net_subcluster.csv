@@ -1,0 +1,2 @@
+group,n,feasible,min_cell_floor,sizes,silhouette,jaccard_mean,jaccard_std
+Profile B NeT sub-cluster,14,True,4,"{0: np.int64(8), 1: np.int64(6)}",0.331,0.965,0.104

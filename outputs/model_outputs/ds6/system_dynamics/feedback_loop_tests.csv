@@ -1,0 +1,4 @@
+loop,flow,outcome,n_raw,r_raw,p_raw,n_partial,r_partial,p_partial
+Loop1_pressure_reinforcement,mean_N_baseline,addiction_index_change,180,-0.0162,0.8295,180,0.0567,0.4495
+Loop1_pressure_reinforcement,mu_hat_baseline,addiction_index_change,180,-0.0876,0.2425,180,-0.1111,0.1375
+Loop2_self_regulation_correction,volume_change,self_control_index_change,178,0.0774,0.3047,178,0.0929,0.2174

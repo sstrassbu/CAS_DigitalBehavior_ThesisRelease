@@ -1,0 +1,52 @@
+dimension,subdimension,ds1_score,ds1_notes,ds4_score,ds4_notes,ds5_score,ds5_notes,ds6_score,ds6_notes
+Study design,Design type,non_experimental,,non_experimental,,experimental_rct,,experimental_quasi,
+Study design,Condition structure,none,,none,,3_arm_rct,,3_arm_cohort,
+Study design,Causal inference potential,weak,single arm no control,weak,observational no control,strong,only RCT,moderate,quasi-experimental cohort assignment not individual
+Participants,N behavioral,619,,1039,,573,,243,
+Participants,N survey linked,527,85.1%,283,27.2%,572,99.8%,243,100%
+Participants,N pre+post linked,168,27.1%,0,no prepost,284,49.6%,188,77.4%
+Participants,N all files linked,169,,0,,284,,243,all behavioral have survey and demo
+Behavioral coverage,Total events,399000,approximate after dedup,2490260,,288688,,353796,session file
+Behavioral coverage,Unique apps,48,narrow,399,broadest,broad,not pre-counted,broad,not pre-counted
+Behavioral coverage,Events per participant (approx),645,,2397,,504,,1456,
+Observation window,Median window days,short,no published median,66,,moderate,shorter than DS4,study_structured,defined by study protocol
+Observation window,Max window days,unknown,short,897,2.5 years,moderate,,study_defined,
+Observation window,Longitudinal depth rating,weak,,strong,,moderate,,structured,
+Friction outcome quality,Outcome types,3,opened/dismissed/closed,3_plus,opened/dismissed/closed + 2 minor,3,opened/dismissed/closed,1,opened only — structural
+Friction outcome quality,Denominator clarity,high,all events are friction events,good,intervention_event class only (36.5% of events),conditional,all events but control has no friction,not_applicable,all outcomes opened — no override/compliance measure
+Friction outcome quality,Override rate NaN,0.2%,,3%,3.2% of intervention participants,0.7%,,100%,structural — not missing data
+Friction outcome quality,Friction outcome rating,high,cleanest denominator,good,event-class filtering required,strong,RCT enables causal interpretation,not_applicable,single outcome type
+Adaptation features,Adaptation trajectory feature,open_rate_change_setup,setup-time axis — 33.8% NaN,open_rate_change_calendar,most reliable — 897d windows,open_rate_change_calendar,16.6% NaN — shorter windows,event_rate_slope,participation_day slope (session_rate_ratio removed 2026-08-05 — duplicate of event_rate_ratio_intervention_vs_baseline; group_id has no real sessions)
+Adaptation features,Time axis type,setup_time,secondsSinceOneSecSetup — per-participant,calendar_days,days_since_first_event — forward-counted,calendar_days,days_since_first_event,participation_day,study-day index
+Adaptation features,Adaptation signal reliability,weak,short windows + 18.9% NaN in setup time,strongest,best in project — long windows,moderate,condition helps interpret direction,structured,baseline vs intervention explicit
+Adaptation features,Explicit baseline period,no,,no,,no,,yes,only dataset with pre-intervention behavioral baseline
+Sequence structure,Pre-engineered sequence fields,no,must derive from timestamp ordering,no,must derive — 2.49M events,no,must derive — condition-aware,yes,app_prev/prev2 up to depth 2 usable directly (app_next/next3 verified non-functional 2026-08-06 — mechanically echo current app; app_next2 usable but needs resolution_next2 conditioning)
+Sequence structure,Session grouping,no,,no,,no,,no,group_id verified non-functional 2026-08-05 — unique per row, not real sessions (close_ts/time_diff_secs ARE genuine open-close dwell time though, corrected 2026-08-06)
+Sequence structure,Substitution potential,weak,only 48 apps,moderate,399 apps but no pre-engineered,moderate,requires derivation,strong,best in project
+Sequence structure,Sequence structure rating,weak,,moderate,,moderate,,strong,
+App diversity,Unique apps available,48,,399,,broad,,broad,
+App diversity,Top app dominance,high,Instagram 41%,diverse,399 apps,diverse,,diverse,
+App diversity,App entropy coverage,low_NaN,0.2% NaN,low_NaN,0.2% NaN,low_NaN,0.2% NaN,low_NaN,0.2% NaN
+Psychosocial layer,Pre-survey availability,85.1%,527/619,27.2%,283/1039 and qualitative only,99.8%,572/573,100%,243/243
+Psychosocial layer,Psychometric scales,thin,problematic_cons + happy — broad Likert,none,qualitative open text only,richest,belonging (8 items) + ostracism (5) + FoMO (10-item validated),strong,self_control_index + addiction_index + trivsel + fo_mo
+Psychosocial layer,Repeated survey waves,no,single pre + single post,no,post-survey only,no,single pre + single post,yes,2-3 waves across study
+Psychosocial layer,Pre-post change scores,yes,168 participants — thin,no,,yes,284 participants — best in project,yes,188 participants + repeated waves
+Psychosocial layer,Demographics,no,,partial,age + gender in 283-participant survey,age,age in pre-survey,full,age + gender + region for all 243
+Psychosocial layer,Psychosocial depth rating,thin,,none,,richest,,strong_with_repeat,
+Experimental features,Intervention types logged,no,DS1 uses single default type only,yes,6 types: breathingExercise/followTheDot/blackScreen/mirror/rotatePhone/minimal,no_explicit_field,interventionDuration binary only,yes,5 types: denmark/breathingExercise/math/followTheDot/randomText
+Experimental features,Reintervention structure,no,,no,,yes,reintervention condition + timeIntervalUntilReIntervention,yes,isReIntervention + timeIntervalUntilReIntervention
+Experimental features,Study condition in behavioral file,no,not applicable — single arm,no,not applicable,no,must join from pre-survey,yes,condition column in behavioral file
+Implementation feasibility,Preprocessing complexity,low,complete and QCd,moderate,large file + event class handling,moderate,condition join + timezone handling,high,two behavioral file families + complex session structure
+Implementation feasibility,Feature engineering done,yes,37 behavioral cols,yes,54 behavioral cols,yes,49 behavioral cols,yes,66 behavioral cols (was 77 -- 10 fake session-derived cols dropped 2026-08-05; 1 more dropped 2026-08-06 app_next fix)
+Implementation feasibility,Known blockers,none,,secondsSinceStudySetup inverted,reconstruct from timestamp,condition join required,one participant missing condition,app_next look-ahead bug (fixed 2026-08-06),sequence features rebuilt on app_prev — self_transition_rate now mean=0.512/sd=0.217, usable
+Model suitability,Statistical regression,moderate,no conditions but psychosocial moderators thin,moderate,large N but no moderators,strong,RCT + psychosocial moderators,moderate,quasi-experimental + smaller N
+Model suitability,Survival / time-to-event,moderate,event timing available; short windows,strong,long windows ideal,strong,condition-stratified survival analysis,moderate,participation day provides structure
+Model suitability,Markov / HMM / stochastic,moderate,sequences derivable,strong,high volume + long sequences,strong,condition-stratified transitions,strong,pre-engineered fields
+Model suitability,Information-theoretic,strong,entropy features complete,strong,richest app space,strong,condition-stratified entropy,strong,baseline vs intervention entropy comparison
+Model suitability,Network / transition,weak,only 48 apps — derivation needed,moderate,399 apps + derivation needed,moderate,condition-stratified transitions,strong,pre-engineered app_prev (app_next verified non-functional 2026-08-06 — use app_prev/app_next2 instead)
+Model suitability,Dynamical systems,weak,short windows,strong,best longitudinal depth,moderate,shorter windows but condition helps,strong,baseline + intervention phase structure
+Model suitability,Agent-based,moderate,behavioral heterogeneity visible; thin moderators,strong,large N + heterogeneity,strong,condition + psychosocial parameterization,moderate,rich per-participant; cohort design limits independence
+Model suitability,System dynamics,weak,no feedback observables; no repeated survey,moderate,long time-series supports loops; no repeated survey,moderate,shorter windows; no repeated survey,strong,repeated surveys + phases + feedback hypotheses
+Model suitability,Psychosocial moderator,weak,thin Likert only,not_suitable,qualitative only,strong_best_in_project,validated scales + RCT,strong,best coverage + repeated waves
+Model suitability,Friction override modeling,strong,cleanest denominator,good,event-class filtering needed,strong,RCT condition,not_suitable,single outcome type
+Overall rating,Overall standalone modeling priority,3_lean_fallback,simplest; no conditions; good for lean pipeline testing,2_long_term,best for habit/adaptation/drift; weak for psychosocial,1_recommended_first,RCT + psychosocial + clean outcomes; best first standalone target,4_rich_but_complex,richest overall; best saved for later after DS5 pipeline established

@@ -1,0 +1,25 @@
+feature,role,rationale
+sig_hat,CORE_CLUSTERING,StoP backbone; independent impulsivity/noise axis
+H_emp,CORE_CLUSTERING,InT backbone; partially independent of sig_hat (r~0.65); non-Gaussian patterns
+x_mean,CORE_CLUSTERING,Mean override level; independent; compliance dimension
+HHI_net,CORE_CLUSTERING,NeT backbone; genuinely new; network hub-concentration
+rho_self,CORE_CLUSTERING,NeT; genuinely new; same-app habitual repetition
+H_hour,SECONDARY,InT; independent; temporal diversity; context-dependence
+H_app,SECONDARY,InT; independent; app breadth; correlated with H_trans
+chi_behav,SECONDARY,StM; partial new signal via p_use; susceptibility near tipping point
+H_out_resid,SECONDARY(P2),Residualized H_out; partial new signal after condition adjustment
+mu_hat,SECONDARY,StoP; near-zero across DS5; weak discriminator; include in sensitivity only
+H_trans,SECONDARY,NeT; partially new; correlated with H_app via I_consec
+beta_behav,INTERPRETATION_ONLY,= 2/sig_hat^2; monotone transform; no new clustering information
+T_behav,INTERPRETATION_ONLY,= sig_hat^2/2; monotone transform
+H_SDE,INTERPRETATION_ONLY,= f(sig_hat); monotone transform
+F_behav,INTERPRETATION_ONLY,"= f(sig_hat, H_emp); composite of two core features"
+is_dys_eligible,INTERPRETATION_ONLY,Binarization of sig_hat
+behaviorally_deterministic,INTERPRETATION_ONLY,Composite of low sig_hat AND low H_emp
+four_model_convergent,INTERPRETATION_ONLY,Effectively = behaviorally_deterministic
+I_consec,EXCLUDE,= H_app - H_trans; derived; not independent of H_app and H_trans
+top1_share_net,EXCLUDE,Correlated with HHI_net
+sigma_mu_ratio,EXCLUDE,31.2% NaN; too noisy for clustering
+p_use_approx,EXCLUDE,Near-duplicate of x_mean (r>0.95)
+H_pi,EXCLUDE(P1),Lower coverage (66.4%); bring in if Phase 1 stable
+study_condition,OVERLAY_ONLY,Experimental assignment; NOT a behavioral feature

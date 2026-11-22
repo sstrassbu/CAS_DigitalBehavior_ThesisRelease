@@ -1,0 +1,7 @@
+study_condition,study_period,n,mu_mean,mu_median,mu_std,sig_mean,sig_median,sig_std,fano_mean,fano_median
+control,baseline,74,0.6269,0.3214,3.7609,25.6308,20.3868,17.7838,8.6853,7.1074
+control,intervention,75,0.4607,0.3929,1.4195,20.2958,17.2949,12.4535,6.3056,5.5867
+default,baseline,85,0.3296,0.2143,2.8743,22.3951,19.0553,15.7401,8.2596,6.7794
+default,intervention,84,0.3202,0.2183,0.5748,8.9474,8.4038,5.6609,2.7808,2.4743
+intervention,baseline,77,-0.2106,-0.0714,2.3274,20.5764,16.9985,13.2548,6.2619,5.7107
+intervention,intervention,77,0.2437,0.1111,0.7239,10.8558,10.4118,6.478,3.5831,2.9235

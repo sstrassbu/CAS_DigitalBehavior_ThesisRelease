@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the thesis (preferred) and this repository."
+title: "CAS_DigitalBehavior: analysis code and results record for the thesis 'Complex Adaptive Systems as Theoretical Lenses on Digital Behavior'"
+type: software
+version: 1.0.0
+license: MIT
+abstract: >-
+  Analysis code, dataset documentation, run reports and aggregate results accompanying
+  the Master's thesis "Complex Adaptive Systems as Theoretical Lenses on Digital Behavior".
+  Contains no data.
+keywords:
+  - complex adaptive systems
+  - digital behavior
+  - smartphone use
+  - friction interventions
+  - behavioral phenotyping
+authors:
+  - family-names: Strassburger
+    given-names: Svea Victoria
+preferred-citation:
+  type: thesis
+  title: "Complex Adaptive Systems as Theoretical Lenses on Digital Behavior: An Exploratory Evaluation of Eight Model Families Across Heterogeneous Digital Trace Data"
+  authors:
+    - family-names: Strassburger
+      given-names: Svea Victoria
+  year: 2026
+  thesis-type: "Master's thesis"
+  department: "Department of Physics and Astronomy"
+  institution:
+    name: "Chalmers University of Technology"
+    city: Gothenburg
+    country: SE

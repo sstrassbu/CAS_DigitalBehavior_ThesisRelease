@@ -1,0 +1,4 @@
+loop_name,X,Y,pearson_r,p_value,n,predicted_sign,pearson_r_within,p_value_within
+productive,completed_count_w,created_count_{w+1},0.9456,0.0,735,positive,0.1182,0.001324
+overload,Backlog_w,created_count_{w+1},0.4185,0.0,735,negative,-0.1794,1e-06
+balancing,Backlog_w,reschedule_count_w (same week),0.4659,0.0,792,positive,-0.1083,0.002276

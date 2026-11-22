@@ -1,0 +1,7 @@
+macrostate_measure,psychosocial,n,r,p
+H_joint_baseline,addiction_index_pre,240,0.085,0.1896
+H_joint_baseline,self_control_index_pre,240,-0.0364,0.5749
+H_joint_intervention,addiction_index_pre,240,0.0535,0.409
+H_joint_intervention,self_control_index_pre,240,-0.0668,0.3025
+susceptibility,addiction_index_pre,238,-0.0029,0.9648
+susceptibility,self_control_index_pre,238,-0.0073,0.9113

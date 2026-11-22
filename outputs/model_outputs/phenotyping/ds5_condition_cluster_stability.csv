@@ -1,0 +1,16 @@
+scope,condition,k,silhouette,min_cell,jaccard_mean,jaccard_std,feasible,selected
+full_sample,control,2,0.3454001704123498,65,0.7437604524564645,0.19011966633024022,True,True
+full_sample,control,3,,17,,,False,False
+full_sample,control,4,,16,,,False,False
+full_sample,default,2,,28,,,False,False
+full_sample,default,3,,27,,,False,False
+full_sample,default,4,,8,,,False,False
+full_sample,reintervention,2,0.32815960879864586,67,0.9590603425496799,0.11073557996076448,True,True
+full_sample,reintervention,3,,19,,,False,False
+full_sample,reintervention,4,,19,,,False,False
+profile_B,control,2,0.42755722450046435,30,0.9117194557671084,0.11196488005600187,True,True
+profile_B,control,3,,9,,,False,False
+profile_B,default,2,,16,,,False,False
+profile_B,default,3,,18,,,False,False
+profile_B,reintervention,2,0.33227625206535794,41,0.882613705502087,0.16284014731471086,True,True
+profile_B,reintervention,3,,14,,,False,False

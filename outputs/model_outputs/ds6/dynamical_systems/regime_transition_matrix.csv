@@ -1,0 +1,5 @@
+regime_baseline,declining,growing,resting,stochastic
+declining,1,3,16,10
+growing,0,6,19,12
+resting,1,3,34,9
+stochastic,0,8,23,85

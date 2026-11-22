@@ -1,0 +1,4 @@
+study_condition,n,H_joint_baseline_mean,H_joint_intervention_mean,pct_persistent,susceptibility_mean
+control,76,2.9178,2.8968,59.4595,0.0279
+default,88,2.8599,2.7999,56.4706,0.0697
+intervention,79,2.7985,2.8021,59.4937,0.0519

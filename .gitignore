@@ -1,0 +1,25 @@
+# --- Python / environments ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# --- DATA SAFETY NET: never commit data or participant-level files ---
+data_raw/*
+!data_raw/README.md
+outputs/cleaned/*
+!outputs/cleaned/*.md
+outputs/interim/
+outputs/features/**/*.csv
+outputs/features/**/*.parquet
+participant_*.csv
+*_assignments*.csv
+*.parquet
+*.zip
+*.xlsx
+
+# --- thesis sources (live in the separate thesis repository) ---
+latex_master_thesis/

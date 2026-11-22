@@ -1,0 +1,15 @@
+sde_param,psychosocial,n,r,p
+mu_hat_baseline,addiction_index_pre,236,-0.0174,0.7904
+mu_hat_baseline,self_control_index_pre,236,-0.05,0.4445
+sig_hat_baseline,addiction_index_pre,236,0.157,0.0158
+sig_hat_baseline,self_control_index_pre,236,-0.0031,0.9622
+fano_baseline,addiction_index_pre,236,0.1216,0.0622
+fano_baseline,self_control_index_pre,236,-0.0212,0.7463
+mu_hat_intervention,addiction_index_pre,236,0.0515,0.4311
+mu_hat_intervention,self_control_index_pre,236,-0.0822,0.2082
+sig_hat_intervention,addiction_index_pre,236,0.1034,0.113
+sig_hat_intervention,self_control_index_pre,236,-0.0371,0.5709
+fano_intervention,addiction_index_pre,236,0.0823,0.208
+fano_intervention,self_control_index_pre,236,-0.0524,0.4232
+h_period,addiction_index_pre,230,0.0373,0.5738
+h_period,self_control_index_pre,230,0.0223,0.7371

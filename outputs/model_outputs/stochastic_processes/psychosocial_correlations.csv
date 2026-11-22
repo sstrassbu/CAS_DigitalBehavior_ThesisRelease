@@ -1,0 +1,9 @@
+target,predictor,pearson_r,p_value,n,note
+mu_hat,fomo_mean_pre,-0.1216,0.0431,277,friction-exposed conditions only (exploratory)
+mu_hat,belong_mean_pre,-0.0083,0.8907,277,friction-exposed conditions only (exploratory)
+mu_hat,ostracism_mean_pre,0.0247,0.682,277,friction-exposed conditions only (exploratory)
+mu_hat,digital_wellbeing_pre,-0.0069,0.9093,277,friction-exposed conditions only (exploratory)
+sig_hat,fomo_mean_pre,-0.1015,0.0919,277,friction-exposed conditions only (exploratory)
+sig_hat,belong_mean_pre,-0.0729,0.2265,277,friction-exposed conditions only (exploratory)
+sig_hat,ostracism_mean_pre,0.0272,0.652,277,friction-exposed conditions only (exploratory)
+sig_hat,digital_wellbeing_pre,0.0003,0.9963,277,friction-exposed conditions only (exploratory)

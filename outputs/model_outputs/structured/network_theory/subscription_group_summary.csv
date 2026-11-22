@@ -1,0 +1,5 @@
+,HHI_net,HHI_net,HHI_net,rho_self,rho_self,rho_self,H_trans,H_trans,H_trans,top1_share_net,top1_share_net,top1_share_net
+,mean,median,count,mean,median,count,mean,median,count,mean,median,count
+subscription_type_last,,,,,,,,,,,,
+free,0.57649375,0.5402,16,0.33320625000000004,0.37129999999999996,16,1.2487375,1.2712500000000002,16,0.7082875,0.681,16
+pro,0.5099241379310344,0.5086,29,0.3949551724137931,0.4247,29,1.3028206896551724,1.3621,29,0.6482344827586207,0.6667,29

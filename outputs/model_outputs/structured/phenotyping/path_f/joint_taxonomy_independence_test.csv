@@ -1,0 +1,2 @@
+test,n,odds_ratio,p_value,verdict
+"Fisher's exact, BehavProfile x NetProfile",36,0.1667,0.0286,"The two axes are NOT statistically independent (p<0.05) -- consistent with Path C's weak-but-nonzero ARI=0.173. The behavioral axis dominates (Path A ARI=1.000 vs Phase 1), but network membership still carries some real, detectable information beyond what the behavioral clusters alone capture."

@@ -1,0 +1,29 @@
+harmonized_name,group,ds1_source,ds4_source,ds5_source,ds6_source,mapping_type,measurement_type,safe_for_descriptive,safe_for_modeling,key_caveats
+dataset_id,metadata,literal_DS1,literal_DS4,literal_DS5,literal_DS6,direct,administrative,yes,yes,None
+participant_id_canonical,metadata,participant_id_canonical,participant_id_canonical,participant_id_canonical,participant_id_canonical,direct,administrative,yes,yes,None
+study_design_type,metadata,non_experimental,non_experimental,experimental_rct,experimental_quasi,direct,administrative,yes,conditional,Must account for design differences before any cross-dataset causal inference
+study_condition,metadata,NaN,NaN,study_condition,study_condition,direct,administrative,yes,conditional,Only DS5 and DS6 have experimental conditions; DS1/DS4 are non-experimental
+total_events,A,total_events,total_events,total_events,total_events,direct,direct,yes,yes,None
+n_days_observed,A,n_days_observed,n_days_observed,n_days_observed,n_days_observed,direct,direct,yes,yes,None
+obs_window_days,A,obs_window_days,obs_window_days,obs_window_days,obs_window_days,direct,direct,yes,yes,None
+events_per_day,A,events_per_day,events_per_day,events_per_day,events_per_day,direct,direct-derived,yes,yes,7.5% NaN overall; single-day-window participants get NaN; DS1 17.4% DS5 12.4% NaN
+n_unique_apps,A,n_unique_apps,n_unique_apps,n_unique_apps,n_unique_apps,direct,direct,yes,yes,None
+top_app_share,A,top_app_share,top_app_share,top_app_share,top_app_share,direct,direct,yes,yes,0.2% NaN
+app_herfindahl,A,app_herfindahl,app_herfindahl,app_herfindahl,app_herfindahl,direct,direct,yes,yes,0.2% NaN; higher = more concentrated app use
+app_entropy,A,app_entropy,app_entropy,app_entropy,app_entropy,direct,direct,yes,yes,0.2% NaN; Shannon entropy of app distribution
+peak_hour_of_day,A,peak_hour_of_day,peak_hour_of_day,peak_hour_of_day,peak_hour_of_day,direct,direct-derived,yes,yes,7.5% NaN; DS1 timestamps assumed UTC
+weekend_event_share,A,weekend_event_share,weekend_event_share,weekend_event_share,weekend_event_share,direct,direct-derived,yes,yes,7.5% NaN
+evening_event_share,A,evening_event_share,evening_event_share,evening_event_share,evening_event_share,direct,direct-derived,yes,yes,7.5% NaN; 18:00-23:00 window
+morning_event_share,A,morning_event_share,morning_event_share,morning_event_share,morning_event_share,direct,direct-derived,yes,yes,7.5% NaN; 06:00-11:00 window
+hour_entropy,A,hour_entropy,hour_entropy,hour_entropy,hour_entropy,direct,direct-derived,yes,yes,10.4% NaN; DS6 renamed from hour_entropy_ds6 in Stage 1 QC; DS6 uses pre-engineered hour_of_day column vs UTC extraction elsewhere — empirically equivalent
+friction_override_rate,B,rate_opened,rate_opened_intervention_events,rate_opened,NaN_structural,assembled_from_different_sources,direct,yes,conditional,CRITICAL: DS6 always NaN (structural); DS4 denominator = intervention_event class only; DS5 control group has no friction exposure — denominator includes friction-free opens; NEVER pool raw values across datasets without reading friction_override_source
+friction_override_source,B,rate_opened__all_events__ds1,rate_opened__intervention_events_only__ds4,rate_opened__all_events__ds5,not_applicable__ds6_all_outcomes_opened,categorical_label,administrative,yes,yes,Always read this before interpreting friction_override_rate
+behavioral_response_ratio,B,NaN,NaN,NaN,event_rate_ratio_intervention_vs_baseline,ds6_specific_proxy,proxy,yes,conditional,DS6 only; n_baseline_days>=7 filter applied (7 participants excluded); >1 means more use during intervention vs baseline; NOT equivalent to friction_override_rate; different construct
+behavioral_response_proxy_type,B,NaN,NaN,NaN,event_rate_ratio_intervention_vs_baseline,categorical_label,administrative,yes,yes,Documents the proxy used for behavioral_response_ratio
+open_rate_change,B,open_rate_change_setup,open_rate_change_calendar,open_rate_change_calendar,NaN_structural,assembled_from_different_time_axes,proxy,yes,conditional,DS6 always NaN; DS1 uses setup-time axis (secondsSinceOneSecSetup) — differs from DS4/DS5 calendar days; sign/direction comparable; magnitude NOT directly comparable; non-experimental datasets (DS1 DS4) conflate adaptation with attrition
+open_rate_change_axis,B,setup_time_ds1,calendar_days,calendar_days,not_available_ds6,categorical_label,administrative,yes,yes,Always read before interpreting open_rate_change
+has_survey,flag,derived_from_survey_file,derived_from_survey_file,derived_from_survey_file,derived_from_survey_file,direct,administrative,yes,yes,DS6: all 243 behavioral participants have wave 1 survey
+has_prepost_survey,flag,derived_from_prepost_file,False_DS4_no_prepost,derived_from_prepost_file,derived_from_prepost_file,direct,administrative,yes,yes,DS4: always False (no pre-post survey)
+has_study_condition,flag,False,False,derived_from_study_condition,derived_from_study_condition,direct,administrative,yes,yes,DS1/DS4: always False
+has_friction_outcome,flag,derived_from_rate_opened,derived_from_rate_opened_intervention_events,derived_from_rate_opened,False_DS6_structural,direct,administrative,yes,yes,DS6: always False — structural
+has_behavioral_response_ratio,flag,False,False,False,derived_from_event_rate_ratio_filtered,direct,administrative,yes,yes,DS1/DS4/DS5: always False; DS6: 235/243 True after n_baseline_days>=7 filter

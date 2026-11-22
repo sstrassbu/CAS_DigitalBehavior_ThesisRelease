@@ -1,0 +1,2 @@
+comparison,overlap_n,ARI,ds5_equivalent_ARI,verdict
+Path A vs Phase 1,36,1.0,0.02,"CONFIRMED: Path A substantially reproduces Phase 1 -- Structured's dominant split IS the behavioral-dynamics axis, unlike DS5 where it was network-driven."

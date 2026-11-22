@@ -1,0 +1,3 @@
+comparison,overlap_n,ARI,ds5_equivalent_ARI,verdict
+Path C vs Phase 1,36,0.173,0.99,"PARTIAL: some correspondence, weaker than DS5's 0.990 but not fully orthogonal -- network structure contributes some but not most of the Phase 1 split."
+Path C vs Path A,36,0.173,,

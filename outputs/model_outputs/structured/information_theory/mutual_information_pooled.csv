@@ -1,0 +1,6 @@
+X,Y,MI_bits,H_Y_bits,normalized_MI,n,note
+task_type_last,lifecycle_status,0.0363,1.1425,0.0317,26729,paper: 'task type may reduce uncertainty about completion'
+update_method_at_creation,entry_placement (inbox vs timeline),0.0936,0.1055,0.8873,10529,paper: 'creation source may reduce uncertainty about inbox vs timeline'. CAUTION: target severely imbalanced (~1.4% inbox) -- see supplementary 3-class version
+update_method_at_creation,"task_type_first (3-class, supplementary)",0.1386,0.4022,0.3446,10529,supplementary check on Pair 2 without binary collapse
+creation_hour_bin,task_type_first,0.0113,0.403,0.028,10555,paper: 'time of day may reduce uncertainty about what kind of task is created'
+task_energy_level,reschedule_occurrence,,,,0,NOT IMPLEMENTABLE -- task_energy_level absent from export (see structured_cas_modeling_plan.md §2)
